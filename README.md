@@ -6,5 +6,5 @@
 
 **Possibilidades de resultado:**
 
-** *1. Vencedor** 
-** *2. Empate**
+** 1. Vencedor ** 
+** 2. Empate **
