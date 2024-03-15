@@ -4,8 +4,8 @@
 
 ### Conhecimentos que  podem aplicados: Algoritmos, entrada, processamento e saída de dados, uso de variáves, uso de estruturas codicionais if else, estruturas de repetição e funções.
 
-**Possibilidades de resultado:**
+#### Possibilidades de resultado:
 
-## 1. Vencedor  
+###### 1. Vencedor  
 
-## 2. Empate 
+###### 2. Empate 
