@@ -1,0 +1,17 @@
+[credential "https://github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[user]
+    email = rafaelpereiraalves@ufba.br
+    name = Rafael Alves
+    signingkey = 3699D0ED602B3BE2
+[commit]
+    signingkey = true  # Only one line needed
+[tag]
+    gpgsign = false
+[gpg]
+    program = gpg
+    pinentry-mode = loopback
