@@ -29,6 +29,6 @@ while !winner or !draw:
 10*. Adiconal features: Make logical with object oriented programming.
 11.* Make Minimum Big  O notation for the algorithm.
 
-
+.
 
 """
