@@ -3,7 +3,9 @@ Traditional Tic-Tac-Toe in Python
 
 The Exercise for Educational Purposes
 
-Knowledge that can be applied: Algorithms, input, data processing and output, use of variables, use of conditional structures if else, repetition structures and functions.
+Knowledge that can be applied: Algorithms,
+input, data processing and output, use of variables,
+use of conditional structures if else, repetition structures and functions.
 Possible Results:
 
 1. Winner
@@ -29,6 +31,20 @@ while !winner or !draw:
 10*. Adiconal features: Make logical with object oriented programming.
 11.* Make Minimum Big  O notation for the algorithm.
 
-.
-
 """
+
+
+def board_view():
+    board = [["__", "|__", "|__"],
+             ["__", "|__", "|__"],
+             [" ", "|  ", "|  "]]
+    contador = 0
+    for i in range(len(board)):
+        for j in range(len(board)):
+            contador += 1
+            print(board[i][j], end="")
+            if contador >= 3:
+                print(" \n ")
+                contador = 0
+
+board_view()
