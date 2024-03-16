@@ -30,7 +30,7 @@ while !winner or !draw:
 9*. Adiconal features: Score board, player 1 vs player 2.
 10*. Adiconal features: Make logical with object oriented programming.
 11.* Make Minimum Big  O notation for the algorithm.
-..
+...
 """
 
 
