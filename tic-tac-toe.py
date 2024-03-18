@@ -34,10 +34,17 @@ while !winner or !draw:
 """
 
 
-def board_view():
-    board = [["__", "|__", "|__"],
+from numpy import void
+
+
+player1 = "X"
+player2 = "O"
+
+board = [["__", "|__", "|__"],
              ["__", "|__", "|__"],
              [" ", "|  ", "|  "]]
+
+def board_view() -> bool:
     contador = 0
     for i in range(len(board)):
         for j in range(len(board)):
@@ -46,5 +53,138 @@ def board_view():
             if contador >= 3:
                 print(" \n ")
                 contador = 0
+                return True
+            else:
+                print(" | ", end="")
+    return False
 
-board_view()
+def postion_ocupped(position1: int) -> bool:
+    if position1 == 1:
+        if board[0][0] != "__":
+            return True
+    elif position1 == 2:
+        if board[0][1] != "__":
+            return True
+    elif position1 == 3:
+        if board[0][2] != "__":
+            return True
+    elif position1 == 4:
+        if board[1][0] != "__":
+            return True
+    elif position1 == 5:
+        if board[1][1] != "__":
+            return True
+    elif position1 == 6:
+        if board[1][2] != "__":
+            return True
+    elif position1 == 7:
+        if board[2][0] != " ":
+            return True
+    elif position1 == 8:
+        if board[2][1] != " ":
+            return True
+    elif position1 == 9:
+        if board[2][2] != " ":
+            return True
+
+    else:
+        return False
+
+def make_move(player: str, position: int )-> bool:
+    player = input("Input ""X"" or ""O"" :")
+    if player == "X":
+        player = player1
+    elif player == "O":
+        player = player2
+    else:
+        print("Invalid input")
+        return False
+    print(board_view())
+    position = input(int("Enter the player1 postion docuped : "))
+    if position == 1 and not postion_ocupped(position):
+        board[0][0] += player
+    elif position == 2 and not postion_ocupped(position):
+        board[0][1] += player
+    elif position == 3  and not postion_ocupped(position):
+        board[0][2] += player
+    elif position == 4 and not postion_ocupped(position):
+        board[1][0] += player
+    elif position == 5  and not postion_ocupped(position):
+        board[1][1] += player
+    elif position == 6  and not postion_ocupped(position):
+        board[1][2] += player
+    elif position == 7 and not postion_ocupped(position):
+        board[2][0] += player
+    elif position == 8 and not postion_ocupped(position):
+        board[2][1] += player
+    elif position == 9  and not postion_ocupped(position):
+        board[2][2] += player
+    else:
+        print("Invalid position")
+        return False
+    print(board_view())
+    return True
+
+def winner_or_draw():
+ if "x" in board[0][0] and board[0][1] and board[0][2]:
+         print("The player1 is winner")
+ elif "x" in board[0][0] and board[0][1] and board[0][2]:
+         print("The player1 is winner")
+ elif "x" in board[1][0] and board[1][1] and board[1][2]:
+            print("The player1 is winner")
+ elif "x" in board[2][0] and board[2][1] and board[2][2]:
+        print("The player1 is winner")
+ elif "x" in board[0][0] and board[1][0] and board[2][0]:
+            print("The player1 is winner")
+ elif "x" in board[0][1] and board[1][1] and board[2][1]:
+            print("The player1 is winner")
+ elif "x" in board[0][2] and board[1][2] and board[2][2]:
+            print("The player1 is winner")
+ elif "x" in board[0][0] and board[1][1] and board[2][2]:
+            print("The player1 is winner")
+ elif "x" in board[0][2] and board[1][1] and board[2][0]:
+            print("The player1 is winner")
+ elif "o" in board[0][0] and board[0][1] and board[0][2]:
+            print("The player2 is winner")
+ elif "o" in board[0][0] and board[0][1] and board[0][2]:
+            print("The player2 is winner")
+ elif "o" in board[1][0] and board[1][1] and board[1][2]:
+            print("The player2 is winner")
+ elif "o" in board[2][0] and board[2][1] and board[2][2]:
+            print("The player2 is winner")
+ elif "o" in board[0][0] and board[1][0] and board[2][0]:
+            print("The player2 is winner")
+ elif "o" in board[0][1] and board[1][1] and board[2][1]:
+            print("The player2 is winner")
+ elif "o" in board[0][2] and board[1][2] and board[2][2]:
+            print("The player2 is winner")
+ elif "o" in board[0][0] and board[1][1] and board[2][2]:
+            print("The player2 is winner")
+ elif "o" in board[0][2] and board[1][1] and board[2][0]:
+            print("The player2 is winner")
+
+
+
+
+
+
+
+"""
+ Table winner
+player1 = board[0][0] and board[0][1] and board[0][2] 
+player2 = board[0][0] and board[0][1] and board[0][2]
+player1 = board[1][0] and board[1][1] and board[1][2] 
+player2 = board[1][0] and board[1][1] and board[1][2]
+player1 = board[2][0] and board[2][1] and board[2][2] 
+player2 = board[2][0] and board[2][1] and board[2][2]
+player1 = board[0][0] and board[1][0] and board[2][0]
+player2 = board[0][0] and board[1][0] and board[2][0]
+player1 = board[0][1] and board[1][1] and board[2][1]
+player2 = board[0][1] and board[1][1] and board[2][1]
+player1 = board[0][2] and board[1][2] and board[2][2]
+player2 = board[0][2] and board[1][2] and board[2][2]
+player1 = board[0][0] and board[1][1] and board[2][2]
+player2 = board[0][0] and board[1][1] and board[2][2]
+player1 = board[0][2] and board[1][1] and board[2][0]
+player2 = board[0][2] and board[1][1] and board[2][0]
+ """
