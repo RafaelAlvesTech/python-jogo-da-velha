@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01ec4dc3-4aef-41f5-9aa2-0c3e4e355f6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.code" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python-jogo-da-velha.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python-jogo-da-velha.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tic-tac-toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic-tac-toe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +60,7 @@
       <workItem from="1710672357246" duration="2203000" />
       <workItem from="1710674584685" duration="2452000" />
       <workItem from="1710759837337" duration="2228000" />
+      <workItem from="1710764041034" duration="120000" />
     </task>
     <servers />
   </component>
